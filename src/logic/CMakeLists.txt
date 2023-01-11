@@ -1,0 +1,50 @@
+project(logic)
+
+set(HEADER_FILES
+        "include/Constants.hpp"
+        "include/Vector2D.hpp"
+        "include/Stopwatch.hpp"
+        "include/Subject.hpp"
+        "include/Observer.hpp"
+        "include/Entity.hpp"
+        "include/PlayerEntity.hpp"
+        "include/WallEntity.hpp"
+        "include/PlatformEntity.hpp"
+        "include/GoalEntity.hpp"
+        "include/BGTileEntity.hpp"
+        "include/PhysicsHitbox.hpp"
+        "include/PhysicsBody.hpp"
+        "include/EntityFactory.hpp"
+        "include/Camera.hpp"
+        "include/World.hpp"
+        "include/LevelLoader.hpp"
+        "include/AbstractParser.hpp"
+        "include/tinyxml/tinystr.h"
+        "include/tinyxml/tinyxml.h"
+        )
+
+set(SOURCE_FILES
+        "Vector2D.cpp"
+        "Stopwatch.cpp"
+        "Subject.cpp"
+        "Observer.cpp"
+        "Entity.cpp"
+        "PlayerEntity.cpp"
+        "WallEntity.cpp"
+        "PlatformEntity.cpp"
+        "GoalEntity.cpp"
+        "BGTileEntity.cpp"
+        "PhysicsHitbox.cpp"
+        "PhysicsBody.cpp"
+        "EntityFactory.cpp"
+        "Camera.cpp"
+        "World.cpp"
+        "LevelLoader.cpp"
+        "AbstractParser.cpp"
+        "include/tinyxml/tinystr.cpp"
+        "include/tinyxml/tinyxml.cpp"
+        "include/tinyxml/tinyxmlerror.cpp"
+        "include/tinyxml/tinyxmlparser.cpp"
+        )
+
+add_library(logic_lib STATIC ${HEADER_FILES} ${SOURCE_FILES})

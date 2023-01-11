@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+src/CMakeFiles/
+src/logic/CMakeFiles
+src/logic/cmake_install.cmake
+src/logic/liblogic_lib.a
+src/logic/Makefile
+
+src/cmake_install.cmake
+src/Makefile
+src/CMakeCache.txt
+src/SuperMeatyMan
