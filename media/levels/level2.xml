@@ -9,7 +9,7 @@
             <height>1080.0</height>
             <autoscroll>
                 <direction>vertical</direction>
-                <speed>0.1</speed>
+                <speed>0.5</speed>
             </autoscroll>
         </Camera>
     </GENERAL>

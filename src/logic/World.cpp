@@ -9,13 +9,13 @@
 
 using namespace Logic;
 
-const double World::TERMINAL_VELOCITY_X = 1.0;
-const double World::MOVEMENT_SPEED = 200.0;
-const double World::TERMINAL_VELOCITY_Y = 1.0;
-const double World::JUMP_FORCE = 0.9;
-const double World::WALLJUMP_FORCE = 0.8;
-const double World::FRICTION = -1000.0;
-const double World::GRAVITY = 100.0;
+const double World::TERMINAL_VELOCITY_X = 4.0;
+const double World::MOVEMENT_SPEED = 2000.0;
+const double World::TERMINAL_VELOCITY_Y = 4.0;
+const double World::JUMP_FORCE = 3;
+const double World::WALLJUMP_FORCE = 2.5;
+const double World::FRICTION = -3000.0;
+const double World::GRAVITY = 1100.0;
 
 Logic::World::World(std::string levelname, std::shared_ptr<EntityFactory> factory, double window_width,
                     double window_height) {
@@ -36,9 +36,9 @@ Logic::World::World(std::string levelname, std::shared_ptr<EntityFactory> factor
 Logic::World::~World() = default;
 
 void Logic::World::update(double dt) {
+    handleInput();
     applyConstraints();
     solveCollisions();
-    handleInput();
     updatePositions(dt);
     calculateViewable();
     if (mLevelComplete)

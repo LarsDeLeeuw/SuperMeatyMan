@@ -32,11 +32,14 @@ bool Stopwatch::behind(const double dt) {
         mLocked = false;
         restart();
     } else {
-        mUpdateElapsedTime += (std::chrono::steady_clock::now() - mLastUpdateTime).count();
+        auto temp = std::chrono::steady_clock::now();
+        mUpdateElapsedTime += (temp - mLastUpdateTime).count();
         if (mUpdateElapsedTime > dt) {
             mLocked = true;
             mUpdateElapsedTime -= dt;
             return true;
+        } else {
+            stopwatch_->mLastUpdateTime = temp;
         }
     }
     // std::cout << mUpdateElapsedTime << "Elapsed time\n" << mLastUpdateTime.co << "Last Update Time\n";
