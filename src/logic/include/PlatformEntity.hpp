@@ -1,5 +1,5 @@
 #ifndef LOGIC_PLATFORMENTITY_HPP
-#define LOGIC_PlatformEntity_HPP
+#define LOGIC_PLATFORMENTITY_HPP
 
 #include "Entity.hpp"
 
